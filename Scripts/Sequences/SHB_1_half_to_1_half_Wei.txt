@@ -67,11 +67,11 @@ wave chirpedSine_shuffle = chirpAmplitude_shuffle*chirp(chirpSamples_shuffle,1,s
 const delay_00 = 0.3E-3; //s; time delay between repeated burning pulses 
 const sample_delay_00=round(delay_00*sampling_rate/16)*16;
 
-playWave(chirpedSine_burning_0);
+playWave(1,chirpedSine_burning_0);
 playZero(sample_delay_00);
 
 for (i = 0; i < Number_of_burning_pulses; i++) {{
-  playWave(chirpedSine_burning);
+  playWave(1,chirpedSine_burning);
   playZero(sample_delay_00);
 }}
 
@@ -83,7 +83,7 @@ const delay_02 = 0.3E-3; //s; time delay between repeated burn-back pulses
 const sample_delay_02=round(delay_02*sampling_rate/16)*16;
 
 for (i = 0; i < Number_of_burning_back_pulses; i++) {{
-  playWave(chirpedSine_burning_back);
+  playWave(1,chirpedSine_burning_back);
   playZero(sample_delay_02);
 }}
 
@@ -93,7 +93,7 @@ playZero(sample_delay_05);
 
 //setTrigger(1);
 
-playWave(chirpedSine_reading);
+playWave(1,chirpedSine_reading);
 //playWave(1,chirpedSine_04,2,w_flat);
 
 const delay_06=20E-3;//s; time delay between the read-out pulse and shuffle pulse
@@ -102,7 +102,7 @@ playZero(sample_delay_06);
 
 //setTrigger(0);
 
-playWave(chirpedSine_shuffle);
+playWave(1,chirpedSine_shuffle);
 
 const delay_07=40E-3;//s; time delay between the shuffle pulse and burning pulse
 const sample_delay_07=round(delay_07*sampling_rate/16)*16;

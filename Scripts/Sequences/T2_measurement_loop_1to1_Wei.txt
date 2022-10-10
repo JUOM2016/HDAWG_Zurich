@@ -93,11 +93,11 @@ for(l=0;l<average;l=l+1){{
       const delay_00 = 0.3E-3; //s; time delay between repeated burning pulses 
       const sample_delay_00=round(delay_00*sampling_rate/16)*16;
       //setTrigger(1);
-      playWave(chirpedSine_burning);
+      playWave(1,chirpedSine_burning);
       playZero(sample_delay_00);
       
       for (i = 0; i < Number_of_burning_pulses; i++) {{
-       playWave(chirpedSine_burning_1);
+       playWave(1,chirpedSine_burning_1);
        playZero(sample_delay_00);
       }} //Buring pulses
 
@@ -109,7 +109,7 @@ for(l=0;l<average;l=l+1){{
       const sample_delay_02=round(delay_02*sampling_rate/16)*16;
       
       for (i = 0; i < Number_of_burning_back_pulses; i++) {{
-        playWave(chirpedSine_burning_back);
+        playWave(1,chirpedSine_burning_back);
         playZero(sample_delay_02);
       }} //Burning-back pulses
   
@@ -117,9 +117,9 @@ for(l=0;l<average;l=l+1){{
       const sample_delay_05=round(delay_05*sampling_rate/16)*16;
       playZero(sample_delay_05);
     
-      playWave(sine_half_pi);
+      playWave(1,sine_half_pi);
       executeTableEntry(j);
-      playWave(sine_pi);
+      playWave(1,sine_pi);
       
       wait(tau_0_samples);
       //wave trigger_echo=ones(round(3e-6*sampling_rate/16)*16);
@@ -135,7 +135,7 @@ for(l=0;l<average;l=l+1){{
       const sample_delay_06=round(delay_06*sampling_rate/16)*16;  
       playZero(sample_delay_06);
       
-      playWave(chirpedSine_shuffle);
+      playWave(1,chirpedSine_shuffle);
       
       const delay_07=0.5E-3;//s; time delay between the shuffle pulse and burning pulse
       const sample_delay_07=round(delay_07*sampling_rate/16)*16;
