@@ -13,7 +13,6 @@ awgMod = HDAWG_PLser(device)
 
 sampling_rate=2.4E9 # Hz; Sampling rate, should be the same as what you set on the right panel!
 
-
 ## HDAWG parameters for pulse sequency
 Number_of_burning_pulses = 299 # Number of burning pulse repetitions  
 Number_of_burning_back_pulses = 200 # Number of burn-back pulse repetitions 
@@ -24,13 +23,14 @@ freq_sweeping_burning=3E6 # Hz; set the scanning frequency range of burning puls
 burning_duration=0.6E-3 #s; burning time 
 
 centre_freq_burning_back=268.45E6 # Hz; Central frequency set to drive the AOM for burn-back
-chirpAmplitude_burning_back = 0.025 # V; amplitude of burn-back
+chirpAmplitude_burning_back = 0.0
+#chirpAmplitude_burning_back = 0.025 # V; amplitude of burn-back
 freq_sweeping_burning_back=0 #Hz; set the scanning frequency range of burn-back (the actual scanning range should be 4*freq_detuning)
 burning_back_duration=0.1E-3 #s; burning time burn-back
 
 centre_freq_reading=250E6; # Hz; Central frequency set to read out the burned spectral hole
 chirpAmplitude_reading = 0.03; # V; amplitude of reading-out pulse
-freq_sweeping_reading=5E6; # Hz; set the scanning frequency range of reading-out pulse (the actual scanning range should be 4*freq_detuning) 1.32877326E6
+freq_sweeping_reading=2E6; # Hz; set the scanning frequency range of reading-out pulse (the actual scanning range should be 4*freq_detuning) 1.32877326E6
 reading_duration=4e-3; # s; reading-out time
 
 centre_freq_shuffle=250E6#Hz; Central frequency of the shuffle pulse
